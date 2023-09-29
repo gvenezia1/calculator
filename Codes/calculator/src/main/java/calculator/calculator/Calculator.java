@@ -8,20 +8,24 @@ import org.apache.logging.log4j.Logger;
 public class Calculator {
 	
 	
-static final Logger LOG = LogManager.getLogger();
+	static final Logger LOG = LogManager.getLogger();
 
 
-public Calculator() {
-	
-	LOG.error("[ho creato un nuovo calcolatore]");
-}
+	public Calculator() {
+		LOG.error("[ho creato un nuovo calcolatore]");
+	}
 
-public int prod(int x, int y) {
+	public int add(int x, int y) {
+		LOG.error("...sto sommando " + x + " e " + y);
+		return x + y;
+	}
 
-	LOG.error("...sto moltiplicando "+x+" e "+y);
-	
-	return x*y;
-}
+	public int prod(int x, int y) {
+		LOG.error("...sto moltiplicando " + x + " e " + y);
+		return x*y;
+	}
+
+
 	public static void main(String[] args) {
 		
 		
@@ -30,8 +34,10 @@ public int prod(int x, int y) {
 		Calculator c = new Calculator();
 		
 		int p=c.prod(30,5);
+		int a = c.add(7,8);
 		
-		System.out.println("il prodotto è "+p);
+		System.out.println("il prodotto è " + p);
+		System.out.println("la somma è " + a);
 	}
 }
 
