@@ -2,3 +2,5 @@ In questo file ci metto le mie spiegazioni
 del progetto di ingegneria del software
 
 forse ho capito
+
+Si hai capito
